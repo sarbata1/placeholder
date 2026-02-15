@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "perfboost",
+  "version": "${version}",
+  "name": "Perf Boost",
+  "description": "Performance-enhancing mod with a toggleable stats HUD in the top-right.",
+  "authors": ["You"],
+  "license": "MIT",
+  "icon": "assets/perfboost/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.perfmod.PerfBoostMod"],
+    "client": ["com.perfmod.PerfBoostClient"]
+  },
+  "mixins": [
+    {
+      "config": "perfboost.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
